@@ -1,5 +1,1 @@
-fn fib: I32 () -> I32 = {
-    |0| 1,
-    |1| 1,
-    |n| (n - 2) in fib + (n - 1) in fib
-}
+fn main = || 1 + 2

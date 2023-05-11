@@ -27,7 +27,6 @@ module.exports = grammar({
         ),
 
         type_signature: $ => seq(
-            repeat($.named_type),
             ':',
             $.type,
         ),

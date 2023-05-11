@@ -309,13 +309,9 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "named_type",
-          "named": true
-        },
         {
           "type": "type",
           "named": true

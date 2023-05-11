@@ -59,13 +59,6 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "named_type"
-          }
-        },
-        {
           "type": "STRING",
           "value": ":"
         },
