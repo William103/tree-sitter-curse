@@ -19,6 +19,25 @@
     }
   },
   {
+    "type": "choice_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "named_type",
+          "named": true
+        },
+        {
+          "type": "variant",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "closure",
     "named": true,
     "fields": {},
@@ -99,6 +118,25 @@
     }
   },
   {
+    "type": "field_kind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "named_field",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "function_definition",
     "named": true,
     "fields": {},
@@ -137,6 +175,25 @@
     }
   },
   {
+    "type": "named_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "non_piecewise_closure",
     "named": true,
     "fields": {},
@@ -156,11 +213,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -227,6 +288,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "choice_definition",
+          "named": true
+        },
         {
           "type": "function_definition",
           "named": true
@@ -339,6 +404,25 @@
     }
   },
   {
+    "type": "variant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "field_kind",
+          "named": true
+        },
+        {
+          "type": "named_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "%",
     "named": false
   },
@@ -408,6 +492,10 @@
   },
   {
     "type": ">=",
+    "named": false
+  },
+  {
+    "type": "choice",
     "named": false
   },
   {

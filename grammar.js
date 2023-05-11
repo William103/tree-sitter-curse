@@ -15,14 +15,40 @@ module.exports = grammar({
 
         _definition: $ => choice(
             $.function_definition,
-            // TODO: choice_definition
+            $.choice_definition
+        ),
+
+        choice_definition: $ => seq(
+            'choice',
+            repeat1($.named_type),
+            '{',
+            repeat(seq($.variant, ',')),
+            optional($.variant),
+            '}',
+        ),
+
+        variant: $ => seq($.named_type, $.field_kind),
+
+        field_kind: $ => choice(
+            $.type,
+            seq(
+                '{',
+                repeat(seq($.named_field, ',')),
+                optional($.named_field),
+                '}',
+            ),
+        ),
+
+        named_field: $ => seq(
+            $.identifier,
+            ':',
+            $.type,
         ),
 
         function_definition: $ => seq(
             'fn',
             $.identifier,
             optional($.type_signature),
-            '=',
             $.closure,
         ),
 
@@ -71,12 +97,7 @@ module.exports = grammar({
 
         end_expression: $ => choice(
             $.end_term,
-            appl($.end_term, $),
-        ),
-
-        end_term: $ => choice(
-            $.term,
-            $.non_piecewise_closure,
+            appl($.end_term, $)
         ),
 
         term: $ => choice(
@@ -88,9 +109,14 @@ module.exports = grammar({
             $.piecewise_closure,
         ),
 
+        end_term: $ => choice(
+            $.term,
+            $.non_piecewise_closure,
+        ),
+
         param: $ => seq(
             $.pattern,
-            // TODO: optional(seq(':', $.type)),
+            optional(seq(':', $.type)),
         ),
 
         pattern: $ => choice(

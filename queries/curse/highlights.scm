@@ -1,4 +1,5 @@
 "fn" @keyword
+"choice" @keyword
 "true" @constant.builtin
 "false" @constant.builtin
 
