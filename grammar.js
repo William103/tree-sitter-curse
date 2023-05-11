@@ -105,6 +105,7 @@ module.exports = grammar({
             $.integer,
             'true',
             'false',
+            'in',
         ),
 
         identifier: $ => /[_a-z][_a-zA-Z0-9]*/,
