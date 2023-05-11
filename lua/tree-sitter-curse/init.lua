@@ -27,8 +27,8 @@ function M.setup(arg)
                 'pack',
                 'packer',
                 'start',
-                'tree-sitter-curse',
-            ) or 'https://github.com/William103/tree-sitter-curse'
+                'tree-sitter-curse'
+            ) or 'https://github.com/William103/tree-sitter-curse',
             files = { 'src/parser.c' },
             branch = 'main',
         },
