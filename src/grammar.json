@@ -392,6 +392,10 @@
           "name": "literal"
         },
         {
+          "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
@@ -571,12 +575,12 @@
         {
           "type": "STRING",
           "value": "false"
-        },
-        {
-          "type": "STRING",
-          "value": "in"
         }
       ]
+    },
+    "variable": {
+      "type": "SYMBOL",
+      "name": "identifier"
     },
     "identifier": {
       "type": "PATTERN",

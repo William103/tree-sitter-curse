@@ -83,6 +83,7 @@ module.exports = grammar({
             seq('(', $.end_expression, ')'),
             $.symbol,
             $.literal,
+            $.variable,
             tuple($.end_expression),
             $.piecewise_closure,
         ),
@@ -105,6 +106,8 @@ module.exports = grammar({
             'true',
             'false',
         ),
+
+        variable: $ => $.identifier,
 
         identifier: $ => /[_a-z][_a-zA-Z0-9]*/,
         named_type: $ => /[A-Z][a-zA-Z0-9_]*/,
