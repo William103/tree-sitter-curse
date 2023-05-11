@@ -1,6 +1,8 @@
 "fn" @keyword
-"true" @keyword
-"false" @keyword
+"choice" @keyword
+"true" @constant.builtin
+"false" @constant.builtin
+"in" @function.builtin
 
 (param_name) @variable.parameter
 (literal) @variable
@@ -9,4 +11,4 @@
 (named_type) @type
 
 ["{" "}" "(" ")"] @punctuation.bracket
-"," @punctuation
+["," "|" "->" ":"] @punctuation.delimiter
