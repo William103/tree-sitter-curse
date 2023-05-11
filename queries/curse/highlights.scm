@@ -1,7 +1,6 @@
 "fn" @keyword
 "true" @constant.builtin
 "false" @constant.builtin
-"in" @function.builtin
 
 (param_name) @variable.parameter
 (literal) @variable
